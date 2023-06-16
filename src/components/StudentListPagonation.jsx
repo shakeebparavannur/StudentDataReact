@@ -29,8 +29,8 @@ const StudentListPagination = () => {
       setStudents(data.students);
       setTotalCount(data.totalCount);
       setTotalPages(Math.ceil(data.totalCount / pageSize));
-      console.log(totalPages,"totalPages");
-      console.log(totalCount,"totalCount");	
+      console.log(totalPages, "totalPages");
+      console.log(totalCount, "totalCount");
     } catch (err) {
       console.error(err);
     }
@@ -61,19 +61,18 @@ const StudentListPagination = () => {
       </table>
       <div className="d-flex justify-content-center">
         <button
-          className="btn btn-primary mr-2"
+          className="btn btn-link text-primary mr-2"
           disabled={pageNumber === 1}
           onClick={() => setPageNumber(pageNumber - 1)}
         >
-          Prev
+          <i className="fas fa-chevron-left"></i>
         </button>
-        <span>Page {pageNumber}</span>
         <button
-          className="btn btn-primary ml-2"
+          className="btn btn-link text-primary ml-2"
           disabled={pageNumber === totalPages}
           onClick={() => setPageNumber(pageNumber + 1)}
         >
-          Next
+          <i className="fas fa-chevron-right"></i>
         </button>
       </div>
     </div>

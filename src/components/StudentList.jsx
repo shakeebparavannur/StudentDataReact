@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import './StudentSearch.css';
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 const StudentList = () => {
   const [students, setStudemts] = useState([]);
@@ -36,6 +37,7 @@ const StudentList = () => {
         </thead>
         <tbody>
         {students.map((student) => (
+            // <Link  to={`/studentdetails/${student.id}`}>
         <tr>
           <td>{student.id}</td>
           <td>{student.name}</td>
@@ -43,6 +45,7 @@ const StudentList = () => {
           <td>{student.dob.split("T")[0]}</td>
           <td>{student.course}</td>
         </tr>
+        // </Link>
       ))}
         </tbody>
       </table>

@@ -18,6 +18,7 @@ function App() {
     <Route path='addstudent' element = {<AddStudent/>}/>
     <Route path='viewAllstudent' element = {<StudentList/>}/>
     <Route path='search' element = {<StudentSearch/>}/>
+    <Route path='studentdetails/:id' element = {<StudentSearch/>}/>
     </Routes>
       
     </BrowserRouter>
